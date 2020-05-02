@@ -12,4 +12,4 @@ EXPOSE 7124
 ENV REDIS_HOST=192.168.0.118
 ENV REDIS_PORT=6380
 
-CMD /app/GrafanaDatastoreServer.py --redis-server $REDIS_HOST --redis-port $REDIS_PORT
+CMD /app/GrafanaDatastoreServer.py --host localhost --port 7124 --redis-server $REDIS_HOST --redis-port $REDIS_PORT

@@ -1,1 +1,2 @@
-docker run -it --name grafana-redistimeseries -p 7124:7124 --link redistimeseries:redistimeseries grafana-redistimeseries
+docker rm -f grafana-redistimeseries
+docker run -d --name grafana-redistimeseries -p 7124:7124 --link redistimeseries:redistimeseries grafana-redistimeseries

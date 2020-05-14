@@ -3,8 +3,9 @@ FROM continuumio/miniconda3
 WORKDIR /app/
 
 COPY requirements.txt /app/
-RUN conda install -y redis && apt update && apt install -y build-essential gcc musl-dev libffi-dev \
-    && pip install -r requirements.txt 
+RUN conda install -y redis 
+RUN apt update && apt install -y build-essential gcc musl-dev libffi-dev 
+RUN pip install -r requirements.txt 
 
 COPY GrafanaDatastoreServer.py /app/
 

@@ -1,0 +1,2 @@
+sudo docker rm -f grafanats_livestream
+sudo docker run -d --name grafanats_livestream -p 7126:7124 grafanats_livestream

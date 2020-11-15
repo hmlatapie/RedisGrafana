@@ -11,5 +11,5 @@ COPY GrafanaDatastoreServer.py /app/
 
 EXPOSE 7124 
 
-CMD /app/GrafanaDatastoreServer.py --host 127.0.0.1 --port 7126 --redis-server 127.0.0.1 --redis-port 6379 
+CMD /app/GrafanaDatastoreServer.py --host 127.0.0.1 --port 7127 --redis-server 127.0.0.1 --redis-port 6380 
 

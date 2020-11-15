@@ -1,0 +1,6 @@
+sudo docker rm -f grafana
+sudo docker run -d --name grafana --net=host -v $(pwd)/defaults.ini:/usr/share/grafana/conf/defaults.ini grafana/grafana:6.7.3-ubuntu
+sudo docker exec -it grafana grafana-cli plugins install grafana-simple-json-datasource
+sudo docker restart grafana
+sudo docker exec -it grafana env |grep -i redis
+

@@ -1,2 +1,0 @@
-sudo docker rm -f grafanats_livestream
-sudo docker run -d --name grafanats_livestream --net=host grafanats_livestream

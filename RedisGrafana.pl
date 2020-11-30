@@ -33,8 +33,7 @@ if($command eq 'grafana')
 	my $port = shift;
 	$port = 3000
 		if !$port;
-	execute("sed 's/3000/$port/' grafanaDefaults.ini > defaults.ini")
-	   if $port != 3000;
+	execute("sed 's/3000/$port/' grafanaDefaults.ini > defaults.ini");
 	my $cmd = <<EOS;
 sudo docker run -itd --name=grafana --net=host  -v \$(pwd)/defaults.ini:/usr/share/grafana/conf/defaults.ini  -e "GF_INSTALL_PLUGINS=grafana-simple-json-datasource" grafana/grafana:latest
 EOS

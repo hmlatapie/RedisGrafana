@@ -1,0 +1,6 @@
+sudo docker rm -f grafana
+sudo docker run -d --name grafana -p 7123:3000 --link grafana-redistimeseries:grafana-redistimeseries grafana/grafana:6.7.3-ubuntu
+sudo docker exec -it grafana grafana-cli plugins install grafana-simple-json-datasource
+sudo docker restart grafana
+sudo docker exec -it grafana env |grep -i redis
+
